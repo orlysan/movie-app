@@ -5,13 +5,13 @@ class FilterInput extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            searchActor : ''
+            searchActor: ''
         }
     }
 
-    searchActor = (event) => {
+    searchActor = (e) => {
         this.setState({
-         searchActor : event.target.value
+         searchActor : e.target.value
         })
  
      }
@@ -19,10 +19,9 @@ class FilterInput extends React.Component{
       
         return (
             <div className="filter-container">
-                <p>Filter</p>
-                <input type="text" name="input-filter" id="input-filter" onChange={this.searchActor} value={this.state.searchActor} placeholder="Search Here"></input>
+                <label>Filter</label><br/>
+                <input onChange={this.searchActor} type="text" name="input-filter" id="input-filter" value={this.state.searchActor}></input>
                 <h2>Search Results</h2>
-                <p>{this.state.searchActor}</p>
             </div>
         )
     }

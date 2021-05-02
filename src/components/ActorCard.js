@@ -10,15 +10,15 @@ class ActorCard extends React.Component{
     render(){
 
         const actorInfo = this.props.actorInfo
-       console.log(actorInfo.fName)
+       
          
               
             return (
-                    <Card className= "fullCard">
+                    <Card key={actorInfo.id} border="secondary" className= "fullCard">
                          <Card.Img variant="top" src={actorInfo.imgUrl}/>
                         <Card.Body className="body">
                             <p>Age: {actorInfo.calculateAge()}</p>
-                            <Card.Link href='{actorInfo.imdbLink}'>Go to Imdb</Card.Link>
+                            <Card.Link href='{actorInfo.imdbLink}' target="_blank">Go to Imdb</Card.Link>
                         </Card.Body>
                         <Card.Footer className="text-muted">{actorInfo.fName +' ' + actorInfo.lName} </Card.Footer>
                     </Card>

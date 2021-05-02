@@ -12,7 +12,6 @@ class GalleryView extends React.Component{
         const actorCard = this.props.actorsDataArry.map(
             actor => <ActorCard actorInfo = {actor} />
         );
-        
     
           return (
             <div className="gallery-container">

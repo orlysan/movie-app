@@ -76,11 +76,14 @@ class ActorsPage extends React.Component{
 
     const actor = actors.map((actor) => 
             new ActorsData(actor.fName, actor.lName, actor.bday, actor.imgUrl, actor.imdbLink))
-           
+            this.filterGallery = () => {
+                console.log('hi')
+            }   
+
         return (
             <Container>
                 <Jumbotron className="Jumbotron">
-                    <FilterInput actorsDataArry ={actor}/>
+                    <FilterInput actorsDataArry ={actor} filterGallery={this.filterGallery}/>
                 </Jumbotron>
                  <GalleryView actorsDataArry ={actor}/>   
             </Container>
