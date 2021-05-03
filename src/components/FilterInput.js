@@ -5,7 +5,7 @@ class FilterInput extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            searchActor: ''
+            searchActor : null
         }
     }
 
@@ -15,8 +15,10 @@ class FilterInput extends React.Component{
         })
  
      }
+
+    
     render(){
-      
+    
         return (
             <div className="filter-container">
                 <label>Filter</label><br/>
