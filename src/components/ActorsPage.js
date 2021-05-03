@@ -28,12 +28,20 @@ class ActorsPage extends React.Component{
         });
     }
 
+    serchTextChanged = (newText) => {
+        console.log(newText);
+    }
+
     render(){
 
         return (
             <Container>
                 <Jumbotron className="Jumbotron">
-                    <FilterInput actorsDataArry ={this.state.actorsArray} filterGallery={this.filterGallery}/>
+                    <FilterInput 
+                    actorsDataArry ={this.state.actorsArray} 
+                    filterGallery={this.filterGallery}
+                    onSearchChange={this.serchTextChanged}
+                    />
                 </Jumbotron>
                  <GalleryView actorsDataArry ={this.state.actorsArray}/>   
             </Container>

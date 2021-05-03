@@ -10,10 +10,12 @@ class FilterInput extends React.Component{
     }
 
     searchActor = (e) => {
+        const val = e.target.value;
         this.setState({
-         searchActor : e.target.value
+         searchActor : val
         })
- 
+        
+        this.props.onSearchChange(val);
      }
 
     
@@ -22,7 +24,7 @@ class FilterInput extends React.Component{
         return (
             <div className="filter-container">
                 <label>Filter</label><br/>
-                <input onChange={this.searchActor} type="text" name="input-filter" id="input-filter" value={this.state.searchActor}></input>
+                <input onChange={this.searchActor} type="text"  value={this.state.searchActor}></input>
                 <h2>Search Results</h2>
             </div>
         )
