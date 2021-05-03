@@ -9,10 +9,11 @@ class GalleryView extends React.Component{
     }
 
     render(){
+     
         const actorCard = this.props.actorsDataArry.map(
-            actor => <ActorCard actorInfo = {actor} />
+            (actor, index) => <ActorCard key={index} actorInfo = {actor} />
         );
-    
+    console.log(this.props.newTextInput)
           return (
             <div className="gallery-container">
               {actorCard}

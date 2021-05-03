@@ -22,14 +22,16 @@ class ActorsPage extends React.Component{
             const actor = data.map((actor) => 
             new ActorsData(actor.fName, actor.lName, actor.bday, actor.imgUrl, actor.imdbLink))
             this.setState({
-                actorsArray : actor
+                actorsArray : actor,
+                newText : null
             })
 
         });
     }
 
     serchTextChanged = (newText) => {
-        console.log(newText);
+        this.setState({newText : newText})
+       
     }
 
     render(){
@@ -43,7 +45,10 @@ class ActorsPage extends React.Component{
                     onSearchChange={this.serchTextChanged}
                     />
                 </Jumbotron>
-                 <GalleryView actorsDataArry ={this.state.actorsArray}/>   
+                 <GalleryView 
+                 actorsDataArry ={this.state.actorsArray}
+                 newTextInput = {this.state.newText}
+                 />   
             </Container>
            
         )
