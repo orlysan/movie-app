@@ -11,7 +11,8 @@ class ActorsPage extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            actorsArray : []
+            actorsArray : [],
+            search: ''
         }
     }
 
@@ -25,7 +26,7 @@ class ActorsPage extends React.Component{
                 actorsArray : actor,
                 newText : null
             })
-
+              
         });
     }
 
@@ -35,7 +36,7 @@ class ActorsPage extends React.Component{
     }
 
     render(){
-
+          
         return (
             <Container>
                 <Jumbotron className="Jumbotron">
