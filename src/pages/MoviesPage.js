@@ -16,7 +16,7 @@ class MoviePages extends React.Component{
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=dcf84c118cc89be974f37f8529ae4c32&query=${newText}`)
             .then( (stream) => stream.json())
             .then((res) => {
-                if(res && res.results){
+                if(res && res.results){ 
                     const newResults = res.results.map((movie) => {
                         return {title : movie.title, id:movie.id}
                     })

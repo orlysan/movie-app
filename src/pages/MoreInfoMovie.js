@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { withRouter } from 'react-router';
 
 class MoreInfo extends React.Component {
     constructor(props){
@@ -7,7 +8,8 @@ class MoreInfo extends React.Component {
     }
 
     render(){
-
+        const movieIndex = this.props.match.params.index;
+console.log(movieIndex)
         const movies = this.props.info.map((movie) => {
             return (
                 <Container>
@@ -19,14 +21,14 @@ class MoreInfo extends React.Component {
             )
         })
         return(
-            <div>{movies}</div>
+            <div>Movie info{movies}</div>
         )
     }
 
     
 }    
 
-export default MoreInfo;
+export default withRouter (MoreInfo);
 
 
 

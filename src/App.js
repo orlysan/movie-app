@@ -23,6 +23,9 @@ function App() {
       <Route  exact path='/movies'>
           <MoviesPage />
       </Route>   
+      <Route  exact path='/movie-card/:index'>
+          <MoviesPage />
+      </Route>   
      </HashRouter>
     
     </div>
